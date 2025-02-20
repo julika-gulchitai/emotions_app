@@ -9,7 +9,7 @@ export const fetchJoke = createAsyncThunk(
   "fetchJoke",
   async ({ id, question, answer }, thunkApi) => {
     try {
-      return await api.get();
+      return await api.get("/");
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }
